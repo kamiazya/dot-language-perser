@@ -1,7 +1,7 @@
 {
   "name": "@kamiazya/dot-language-perser",
   "description": "A dot language parser to handle AST so that it can be handled by TypeScript.",
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "author": "kamiazya <yuki@kamiazya.tech>",
   "license": "MIT",
   "main": "dist/index.js",
