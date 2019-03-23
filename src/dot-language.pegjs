@@ -1,7 +1,7 @@
 // Simplified DOT grammar
 
 {
-let directed;
+let directed: boolean;
 }
 
 start
@@ -44,11 +44,8 @@ nodeStmt
 
 edgeStmt
   = lhs:(nodeIdOrSubgraph) _* rhs:edgeRHS _* attrs:attrList? {
-      var elems = [lhs];
-      for (var i = 0; i < rhs.length; ++i) {
-        elems.push(rhs[i]);
-      }
-      return { type: "edge", elems: elems, attrs: attrs || {} };
+      const elems = [lhs].concat(rhs);
+      return { type: "edge", elems, attrs: attrs || {} };
     }
 
 subgraphStmt
@@ -59,9 +56,9 @@ subgraphStmt
 
 attrList
   = first:attrListBlock rest:(_* attrListBlock)* {
-      var result = first;
-      for (var i = 0; i < rest.length; ++i) {
-        Object.assign(result, rest[i][1]);
+      const result = first;
+      for (const r of rest) {
+        Object.assign(result, r[1]);
       }
       return result;
     }
@@ -80,10 +77,10 @@ aList
 
 edgeRHS
   = ("--" !{ return directed; } / "->" &{ return directed; }) _* rhs:(nodeIdOrSubgraph) _* rest:edgeRHS? {
-      var result = [rhs];
+      const result = [rhs];
       if (rest) {
-        for (var i = 0; i < rest.length; ++i) {
-          result.push(rest[i]);
+        for (let r of rest) {
+          result.push(r);
         }
       }
       return result;
@@ -91,9 +88,7 @@ edgeRHS
 
 idDef
   = k:id v:(_* '=' _* id)? {
-      var result = {};
-      result[k] = v[3];
-      return result;
+      return {[k]: v[3]};
     }
 
 nodeIdOrSubgraph

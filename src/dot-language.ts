@@ -201,20 +201,17 @@ function peg$parse(input: string, options?: IParseOptions) {
       };
   const peg$c12 = function(id: any, attrs: any) { return {type: "node", id: id, attrs: attrs || {}}; };
   const peg$c13 = function(lhs: any, rhs: any, attrs: any) {
-        var elems = [lhs];
-        for (var i = 0; i < rhs.length; ++i) {
-          elems.push(rhs[i]);
-        }
-        return { type: "edge", elems: elems, attrs: attrs || {} };
+        const elems = [lhs].concat(rhs);
+        return { type: "edge", elems, attrs: attrs || {} };
       };
   const peg$c14 = function(id: any, stmts: any) {
         id = (id && id[2]) || [];
         return { type: "subgraph", id: id[0], stmts: stmts };
       };
   const peg$c15 = function(first: any, rest: any) {
-        var result = first;
-        for (var i = 0; i < rest.length; ++i) {
-          Object.assign(result, rest[i][1]);
+        const result = first;
+        for (const r of rest) {
+          Object.assign(result, r[1]);
         }
         return result;
       };
@@ -238,18 +235,16 @@ function peg$parse(input: string, options?: IParseOptions) {
   const peg$c27 = "->";
   const peg$c28 = peg$literalExpectation("->", false);
   const peg$c29 = function(rhs: any, rest: any) {
-        var result = [rhs];
+        const result = [rhs];
         if (rest) {
-          for (var i = 0; i < rest.length; ++i) {
-            result.push(rest[i]);
+          for (let r of rest) {
+            result.push(r);
           }
         }
         return result;
       };
   const peg$c30 = function(k: any, v: any) {
-        var result = {};
-        result[k] = v[3];
-        return result;
+        return {[k]: v[3]};
       };
   const peg$c31 = function(id: any) { return { type: "node", id: id, attrs: {} }; };
   const peg$c32 = function(id: any) { return id; };
@@ -2478,7 +2473,7 @@ function peg$parse(input: string, options?: IParseOptions) {
   }
 
 
-  let directed;
+  let directed: boolean;
 
 
   peg$result = peg$startRuleFunction();

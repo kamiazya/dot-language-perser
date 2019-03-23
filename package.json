@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "author": "kamiazya <yuki@kamiazya.tech>",
   "license": "MIT",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "npm run peg && tsc",
     "peg": "pegjs --plugin ts-pegjs -o src/dot-language.ts src/dot-language.pegjs"
   },
   "devDependencies": {
