@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "main": "dist/index.js",
   "author": "kamiazya <yuki@kamiazya.tech>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.3.4000"
+  }
 }
