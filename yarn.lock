@@ -2,6 +2,23 @@
 # yarn lockfile v1
 
 
+"@types/pegjs@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@types/pegjs/-/pegjs-0.10.1.tgz#9a2f3961dc62430fdb21061eb0ddbd890f9e3b94"
+  integrity sha512-ra8IchO9odGQmYKbm+94K58UyKCEKdZh9y0vxhG4pIpOJOBlC1C+ZtBVr6jLs+/oJ4pl+1p/4t3JtBA8J10Vvw==
+
+pegjs@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/pegjs/-/pegjs-0.10.0.tgz#cf8bafae6eddff4b5a7efb185269eaaf4610ddbd"
+  integrity sha1-z4uvrm7d/0tafvsYUmnqr0YQ3b0=
+
+ts-pegjs@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/ts-pegjs/-/ts-pegjs-0.2.2.tgz#f4ae6cc277133083858033badf6991a12a400f7c"
+  integrity sha512-7PUw/w9pFNk/kiv1x7e2lu4WUetQYnaCXjxiRJTEWoLSXpjsg8VKMZpUwa+zACNuWPCL7tcI+1IaC9mm3Pqb7Q==
+  dependencies:
+    pegjs "^0.10.0"
+
 typescript@^3.3.4000:
   version "3.3.4000"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.3.4000.tgz#76b0f89cfdbf97827e1112d64f283f1151d6adf0"

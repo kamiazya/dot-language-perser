@@ -1,10 +1,15 @@
 {
-  "name": "dot.js",
+  "name": "ts-dot",
   "version": "0.0.0",
-  "main": "dist/index.js",
   "author": "kamiazya <yuki@kamiazya.tech>",
   "license": "MIT",
+  "scripts": {
+    "peg": "pegjs --plugin ts-pegjs -o src/dot-language.ts src/dot-language.pegjs"
+  },
   "devDependencies": {
+    "@types/pegjs": "^0.10.1",
+    "pegjs": "^0.10.0",
+    "ts-pegjs": "^0.2.2",
     "typescript": "^3.3.4000"
   }
 }
