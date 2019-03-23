@@ -1,0 +1,7 @@
+{
+  "name": "dot.js",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "author": "kamiazya <yuki@kamiazya.tech>",
+  "license": "MIT"
+}
