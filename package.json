@@ -6,13 +6,22 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm run peg && tsc",
-    "peg": "pegjs --plugin ts-pegjs -o src/dot-language.ts src/dot-language.pegjs"
+    "build": "yarn peg && tsc",
+    "peg": "pegjs --plugin ts-pegjs -o src/dot-language.ts src/dot-language.pegjs",
+    "prepare": "yarn build",
+    "prerelease": "yarn prepare",
+    "release": "release-it --preRelease"
   },
   "devDependencies": {
     "@types/pegjs": "^0.10.1",
     "pegjs": "^0.10.0",
+    "release-it": "^10.3.1",
     "ts-pegjs": "^0.2.2",
     "typescript": "^3.3.4000"
+  },
+  "release-it": {
+    "git": {
+      "tagName": "v${version}"
+    }
   }
 }
