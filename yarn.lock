@@ -2802,9 +2802,9 @@ trim-off-newlines@^1.0.0:
   integrity sha1-n5up2e+odkw4dpi8v+sshI8RrbM=
 
 ts-pegjs@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/ts-pegjs/-/ts-pegjs-0.2.2.tgz#f4ae6cc277133083858033badf6991a12a400f7c"
-  integrity sha512-7PUw/w9pFNk/kiv1x7e2lu4WUetQYnaCXjxiRJTEWoLSXpjsg8VKMZpUwa+zACNuWPCL7tcI+1IaC9mm3Pqb7Q==
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/ts-pegjs/-/ts-pegjs-0.2.6.tgz#fc6261cca04736c43e58c630ecfc5dcff23dbb39"
+  integrity sha512-mIX/dMQ6a1EHAEhvCLS6Z41+O700zlLiwB4V5ZSlKFLZKLDE93reik5IFw/HJsKgs488UiLx144yeEWWyu7YIw==
   dependencies:
     pegjs "^0.10.0"
 
