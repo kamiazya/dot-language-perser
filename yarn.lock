@@ -1624,10 +1624,10 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-ts-pegjs@^0.2.2:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/ts-pegjs/-/ts-pegjs-0.2.6.tgz#fc6261cca04736c43e58c630ecfc5dcff23dbb39"
-  integrity sha512-mIX/dMQ6a1EHAEhvCLS6Z41+O700zlLiwB4V5ZSlKFLZKLDE93reik5IFw/HJsKgs488UiLx144yeEWWyu7YIw==
+ts-pegjs@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/ts-pegjs/-/ts-pegjs-0.3.0.tgz#c292eb5ff4f999e84f9be7212dae23e3ad0b3cae"
+  integrity sha512-Hvcg0SXJBJ5Q3Vf7CiWU5ZNsqoh9PLBWg+rcL8xn5Q8t1iF82LEtevWUJxPGilHjfTz++31ZK9m9gVndGy5tdg==
   dependencies:
     pegjs "^0.10.0"
 
